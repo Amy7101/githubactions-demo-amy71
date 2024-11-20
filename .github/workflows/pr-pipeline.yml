@@ -19,11 +19,11 @@ jobs:
       - name: Running multiple command at once
         run: |
           echo "Hello World !"
-          python hello.py
-          python odd.py
           ls -l
-      # - name: Install cowsay
-      #   run: sudo apt-get install cowsay -y
+      - name: Running hello.py
+        run: |
+          python hello.py
 
-      # - name: Generate ASCII Artwork
-      #   run: cowsay -f dragon "Run for cover, I am a Dragon...RAWR">> dragon.txt
+      - name: Running odd.py
+        run: |
+          python odd.py
