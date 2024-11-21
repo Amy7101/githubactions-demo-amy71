@@ -1,0 +1,29 @@
+name: Pr-Pipeline
+
+on: push
+
+jobs:
+  build-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout own repo
+        uses: actions/checkout@v4.1.7
+  
+      - name: welcome message
+        run: echo "My first actions"
+        
+      - name: list files
+        run: ls
+
+        # as it is yaml to write multi line command we have to use Pipe character
+      - name: Running multiple command at once
+        run: |
+          echo "Hello World !"
+          ls -l
+      - name: Running hello.py
+        run: |
+          python hello.py
+
+      - name: Running odd.py
+        run: |
+          python odd.py
