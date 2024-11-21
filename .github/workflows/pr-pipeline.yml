@@ -3,7 +3,7 @@ name: Pr-Pipeline
 on: push
 
 jobs:
-  first_job:
+  build-job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout own repo
